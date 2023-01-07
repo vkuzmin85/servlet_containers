@@ -32,7 +32,7 @@ public class PostController {
             response.getWriter().print(gson.toJson(data));
             response.setStatus(HttpServletResponse.SC_OK);
         } catch (IOException e) {
-            response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+            e.printStackTrace();
         }
     }
 

@@ -3,7 +3,6 @@ package ru.netology.controller;
 import com.google.gson.Gson;
 import ru.netology.model.Post;
 import ru.netology.service.PostService;
-
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.Reader;
@@ -32,7 +31,7 @@ public class PostController {
             response.getWriter().print(gson.toJson(data));
             response.setStatus(HttpServletResponse.SC_OK);
         } catch (IOException e) {
-            response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+            e.printStackTrace();
         }
     }
 
